@@ -158,6 +158,18 @@
 </footer>
 
 <script>
+            const navVintageBurger = document.querySelector('.nav-vintage__burger');
+            const navVintage = document.querySelector('.nav-vintage');
+
+            if (navVintageBurger && navVintage) {
+                navVintageBurger.addEventListener('click', () => {
+                    const isOpen = navVintage.classList.toggle('is-open');
+                    navVintageBurger.setAttribute('aria-expanded', isOpen);
+                });
+            }
+</script>
+
+<script>
 if(localStorage.getItem("cookiesAccepted")){var b=document.getElementById("cookie-banner");
 if(b)b.style.display="none";}var a=document.getElementById("cookie-accept");if(a){a.onclick=function(){localStorage.setItem("cookiesAccepted","1");
 document.getElementById("cookie-banner").style.display="none";}}
